@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash Chand - CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <span class="icon" id="themeIcon">🌙</span>
+        <span id="themeLabel">Dark</span>
+    </button>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Prakash Chand</h1>
+            <p class="subtitle">Production &amp; Manufacturing Professional</p>
+            <div class="contact">
+                <span>📧 bhardwajprakash422@gmail.com</span>
+                <span>📱 +91 8894015108</span>
+                <span>📍 Bharad(464), P.O. Thunag, District Mandi, HP</span>
+            </div>
+        </div>
+
+        <!-- Objective -->
+        <div class="objective">
+            <strong>Objective</strong><br>
+            To contribute to the success of an organization by utilizing my technical expertise and skills in production and manufacturing while continuously developing myself in a dynamic environment.
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="exp-item">
+                <h3>Machine Operator &amp; Assembly Line Worker (ALW)</h3>
+                <div class="org">Maruti Suzuki India Ltd., Manesar</div>
+                <div class="duration">2 Years</div>
+                <ul>
+                    <li>Supported production line operations to ensure efficient manufacturing processes</li>
+                    <li>Maintained high-quality standards by adhering to safety and compliance protocols</li>
+                    <li>Worked collaboratively with a team to meet production targets and deadlines</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <h3>Junior Engineer - Incoming Quality (Inspection)</h3>
+                <div class="org">Sigma Corporation Pvt. Ltd., Manesar</div>
+                <div class="duration">October 2024 - Current</div>
+                <ul>
+                    <li>Worked across three different roles within the department during the 1-year tenure</li>
+                    <li>Inspection of sheet metal, rubber, aluminium casting, etc. in assembly line</li>
+                    <li>Ensured adherence to quality standards and specifications</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-grid">
+                <div class="edu-item">
+                    <h3>Matriculation</h3>
+                    <div class="institute">HPBOSE</div>
+                    <div class="year">2015</div>
+                </div>
+                <div class="edu-item">
+                    <h3>Higher Secondary (12th)</h3>
+                    <div class="institute">HPBOSE</div>
+                    <div class="year">2017</div>
+                </div>
+                <div class="edu-item" style="grid-column: 1 / -1;">
+                    <h3>Fitter and Plumbing</h3>
+                    <div class="institute">NCVT</div>
+                    <div class="year">2019</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>🛠️ Technical Skills</h4>
+                    <div class="skill-tags">
+                        <span>Fitting</span>
+                        <span>Plumbing</span>
+                        <span>Machine Operation</span>
+                        <span>Maintenance</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>🏭 Manufacturing</h4>
+                    <div class="skill-tags">
+                        <span>Automobile Production</span>
+                        <span>Assembly Line</span>
+                        <span>Quality Control</span>
+                        <span>Quality Assurance</span>
+                    </div>
+                </div>
+                <div class="skill-category" style="grid-column: 1 / -1;">
+                    <h4>🤝 Soft Skills</h4>
+                    <div class="skill-tags">
+                        <span>Teamwork</span>
+                        <span>Adaptability</span>
+                        <span>Problem Solving</span>
+                        <span>Communication</span>
+                        <span>Time Management</span>
+                        <span>Attention to Detail</span>
+                    </div>
+                </div>
+                <div class="skill-category" style="grid-column: 1 / -1;">
+                    <h4>🌐 Languages</h4>
+                    <div class="skill-tags">
+                        <span>Hindi</span>
+                        <span>English</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="section">
+            <h2 class="section-title">Achievements &amp; Awards</h2>
+            <div class="achieve-grid">
+                <div class="achieve-item">
+                    <h4>🏆 Awards</h4>
+                    <ul>
+                        <li>Awarded "Best Employee of the Year" for outstanding performance, commitment to quality, and consistently exceeding production targets</li>
+                        <li>Recognized for "Maximum Working Hours" in appreciation of exceptional dedication and work ethic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="section">
+            <h2 class="section-title">Hobbies &amp; Interests</h2>
+            <div class="hobbies">
+                <span>🏏 Cricket</span>
+                <span>🎨 Painting</span>
+                <span>🥾 Trekking</span>
+                <span>📚 Reading</span>
+                <span>🎵 Music</span>
+                <span>🏸 Badminton</span>
+                <span>🌿 Gardening</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeLabel = document.getElementById('themeLabel');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateButton(savedTheme);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateButton(newTheme);
+        });
+
+        function updateButton(theme) {
+            if (theme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeLabel.textContent = 'Light';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeLabel.textContent = 'Dark';
+            }
+        }
+    </script>
+</body>
+</html>
